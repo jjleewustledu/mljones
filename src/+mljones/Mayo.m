@@ -21,13 +21,12 @@ classdef Mayo < DataCuration & handle
 
     methods
         function this = Mayo()
-            this.demogr = mladni.MayoDemographics();
-            this.nmf = mladni.NMF( ...
+            this.demogr = mljones.MayoDemographics();
+            this.nmf = mljones.NMF( ...
                 data_home=this.data_home, ...
                 selectedNumBases=this.selectedNumBases);
-            this.nmfc = mladni.NMFCovariates();
-            this.nmfh = mladni.NMFHierarchies(data_home=this.data_home);
-            this.nmfr = mladni.NMFRadar();
+            this.nmfc = mljones.NMFCovariates();
+            % this.nmfr = mljones.NMFRadar();
         end
 
         function call(this)
